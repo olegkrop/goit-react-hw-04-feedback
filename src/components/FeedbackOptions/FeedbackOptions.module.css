@@ -1,0 +1,8 @@
+.feedback {
+    margin: 10px 10px;
+    width: 100px;
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
