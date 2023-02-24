@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './FeedbackOptions.module.css';
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 export class FeedbackOptions extends Component {
   render() {
     const { options, onLeaveFeedback } = this.props;
@@ -16,7 +20,7 @@ export class FeedbackOptions extends Component {
               onClick={onLeaveFeedback}
               name={option}
             >
-              {option}
+              {capitalizeFirstLetter(option)}
             </button>
           ))}
         </div>
