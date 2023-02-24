@@ -6,20 +6,17 @@ export class FeedbackOptions extends Component {
   render() {
     const { options, onLeaveFeedback } = this.props;
     const stateOptions = Object.keys(options);
-    function capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
     return (
       <>
         <div>
           {stateOptions.map(option => (
             <button
-              className={style.feedback}
+              className={style.feedbackButton}
               type="button"
               onClick={onLeaveFeedback}
               name={option}
             >
-              {capitalizeFirstLetter(option)}
+              {option}
             </button>
           ))}
         </div>
