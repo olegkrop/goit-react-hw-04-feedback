@@ -7,7 +7,7 @@ export class Statistics extends Component {
     const { good, neutral, bad, total, positivePercentage } = this.props;
     return (
       <>
-        <div className={style.statisticsItem}>
+        <div className={style.statistics}>
           <span> Good: {good} </span>
           <span> Neutral: {neutral} </span>
           <span> Bad: {bad} </span>

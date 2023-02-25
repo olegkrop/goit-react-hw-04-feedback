@@ -42,7 +42,7 @@ export class App extends Component {
     const total = this.countTotalFeedback();
     return (
       <>
-        <div className={style.boxApp}>
+        <div className={style.app}>
           <Section title="Please leave feedback">
             <FeedbackOptions
               options={this.state}

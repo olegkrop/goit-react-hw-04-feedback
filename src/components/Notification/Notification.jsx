@@ -7,7 +7,7 @@ export class Notification extends Component {
     const { message } = this.props;
     return (
       <>
-        <span className={style.notificationText}>{message}</span>
+        <span className={style.notification}>{message}</span>
       </>
     );
   }
