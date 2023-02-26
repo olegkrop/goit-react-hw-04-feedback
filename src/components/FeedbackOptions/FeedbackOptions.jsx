@@ -15,6 +15,7 @@ export class FeedbackOptions extends Component {
         <div>
           {stateOptions.map(option => (
             <button
+              key={option}
               className={style.feedback}
               type="button"
               onClick={onLeaveFeedback}
