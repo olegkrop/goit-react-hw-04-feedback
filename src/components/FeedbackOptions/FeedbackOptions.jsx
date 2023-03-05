@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './FeedbackOptions.module.css';
 
@@ -6,31 +5,30 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export class FeedbackOptions extends Component {
-  render() {
-    const { options, onLeaveFeedback } = this.props;
-    const stateOptions = Object.keys(options);
-    return (
-      <>
-        <div>
-          {stateOptions.map(option => (
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return (
+    <>
+      <div>
+        {options.map(option => {
+          return (
             <button
               key={option}
-              className={style.feedback}
               type="button"
-              onClick={onLeaveFeedback}
-              name={option}
+              className={style.feedback}
+              onClick={() => onLeaveFeedback(option)}
             >
               {capitalizeFirstLetter(option)}
             </button>
-          ))}
-        </div>
-      </>
-    );
-  }
-}
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
 FeedbackOptions.propTypes = {
   options: PropTypes.object,
   onLeaveFeedback: PropTypes.func,
 };
+
+export default FeedbackOptions;
